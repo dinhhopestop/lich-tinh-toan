@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        function congSoSieuLon(soThu1, soThu2) {
+        function congSo(soThu1, soThu2) {
             let ketQua = "";
             let nhoDu = 0;
             while (soThu1.length < soThu2.length) soThu1 = "0" + soThu1;
@@ -20,7 +20,7 @@
             if (nhoDu > 0) ketQua = nhoDu + ketQua;
             return ketQua;
         }
-        function nhanSoSieuLon(soThu1, soThu2) {
+        function nhanSo(soThu1, soThu2) {
             let ketQua = "0";
             for (let i = soThu2.length - 1; i >= 0; i--) {
                 let nhoDu = 0;
@@ -32,12 +32,12 @@
                 }
                 if (nhoDu > 0) tempResult = nhoDu + tempResult;
                 tempResult += "0".repeat(soThu2.length - 1 - i);
-                ketQua = congSoSieuLon(ketQua, tempResult);
+                ketQua = congSo(ketQua, tempResult);
             }
             return ketQua.replace(/^0+/, "") || "0";
         }
-        let ketQua = nhanSoSieuLon("123456789123456789009876543212345678909098765456789876543212345678987878987654321", "1234567890123456789012345678901234567891234567890123456789")
-        console.log("Kết quả nhân 2 số siêu lớn là: " + ketQua);
+        let ketQua = nhanSo("123456789123456789009876543212345678909098765456789876543212345678987878987654321", "1234567890123456789012345678901234567891234567890123456789")
+        console.log("Kết quả nhân : " + ketQua);
     </script>
 </body>
 </html>
