@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function can(year) {
+            let can = year % 10;
+            if (can == 0) {
+                return "Canh"
+            }
+            else if (can == 1) {
+                return "Tân"
+            }
+            else if (can == 2) {
+                return "Nhâm"
+            }
+            else if (can == 3) {
+                return "Quý"
+            }
+            else if (can == 4) {
+                return "Giáp"
+            }
+            else if (can == 5) {
+                return "Ất"
+            }
+            else if (can == 6) {
+                return "Bính"
+            }
+            else if (can == 7) {
+                return "Đinh"
+            }
+            else if (can == 8) {
+                return "Mậu"
+            }
+            else if (can == 9) {
+                return "Kỉ"
+            }
+        }
+        function chi(year) {
+            let chi = year % 12;
+            if (chi == 0) {
+                return "Thân"
+            }
+            else if (chi == 1) {
+                return "Dậu"
+            }
+            else if (chi == 2) {
+                return "Tuất"
+            }
+            else if (chi == 3) {
+                return "Hợi"
+            }
+            else if (chi == 4) {
+                return "Tý"
+            }
+            else if (chi == 5) {
+                return "Sửu"
+            }
+            else if (chi == 6) {
+                return "Dần"
+            }
+            else if (chi == 7) {
+                return "Mão"
+            }
+            else if (chi == 8) {
+                return "Thìn"
+            }
+            else if (chi == 9) {
+                return "Tỵ"
+            }
+            else if (chi == 10) {
+                return "Ngọ"
+            }
+            else if (chi == 11) {
+                return "Mùi"
+            }
+        }
+        function canChi(year) {
+            let nameCan = can(year)
+            let nameChi = chi(year)
+            return "Năm " + year + " là năm " + nameCan + " " + nameChi
+        }
+        let nameCanChi = canChi(1997)
+        console.log(nameCanChi)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function congSo(soThu1, soThu2) {
+            let ketQua = "";
+            let nhoDu = 0;
+            while (soThu1.length < soThu2.length) soThu1 = "0" + soThu1;
+            while (soThu2.length < soThu1.length) soThu2 = "0" + soThu2;
+            for (let i = soThu2.length - 1; i >= 0; i--) {
+                let tong = parseInt(soThu1[i]) + parseInt(soThu2[i]) + nhoDu;
+                nhoDu = Math.floor( tong / 10);
+                ketQua = (tong % 10) + ketQua;
+            }
+            if (nhoDu > 0) ketQua = nhoDu + ketQua;
+            return ketQua;
+        }
+        let ketQua = congSo("123456789123456789009876543212345678909098765456789876543212345678987878987654321", "1234567890123456789012345678901234567891234567890123456789")
+        console.log("Kết quả cộng 2 số siêu lớn là: " + ketQua);
+    </script>
+</body>
+
+</html>
